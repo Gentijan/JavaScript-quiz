@@ -7,7 +7,7 @@ body {
     height: 480px;
     display: none;
     position: relative;
-    background-image: url(/assets/images/champions-league.jpg);
+    background-image: url(/assets/images/background-game.webp);
     display: block;
     border-radius: 20px;
 }
@@ -17,10 +17,11 @@ body {
     top: 90px;
     display: flex;
     flex-direction: row;
-    font-size: 18px;
+    font-size: 20px;
+    color: rgb(6, 236, 129);
 }
 
-.choice-container {
+.select-container {
     display: flex;
     margin-left: 40px;
     margin-bottom: 0.8rem;
@@ -31,7 +32,7 @@ body {
     max-width: 90%;
 }
 
-.choice-container:hover {
+.select-container:hover {
     cursor: pointer;
     box-shadow: 0 0.4rem 1.4rem 0 rgba(227, 233, 240, 0.856);
     transform: scale(1.05);
@@ -39,12 +40,11 @@ body {
     background: blue;
 }
 
-.choice-prefix {
+.select-choice {
     padding: 2rem 2.5rem;
-    color: white;
 }
 
-.choice-text {
+.select-text {
     padding: 2rem;
     width: 100%;
 }
@@ -63,26 +63,37 @@ body {
 }
 
 .hud-prefix {
-    text-align: center;
+    margin-left: 2rem;
+    font-size: 2rem;
+    color: 50, 50, 61, 0.993;
+    font-weight: bold;
+}
+
+.hud-prefix span {
+    margin-left: 7rem;
     font-size: 2rem;
 }
 
-.hud-main-text {
-    text-align: center;
+.hud-text {
+    margin-right: 5rem;
+    margin-bottom: 5rem;
+    color: white;
+    font-weight: bold;
 }
 
 #progressBar {
     width: 20rem;
     height: 3rem;
-    border: 0.2rem solid rgb(11, 223, 36);
+    border: 0.2rem solid rgb(12, 2, 71);
     margin-top: 2rem;
+    margin-left: 2rem;
     border-radius: 50px;
     overflow: hidden;
 }
 
 #progressBarFull {
     height: 100%;
-    background: rgb(11, 223, 36);
+    background: rgb(6, 0, 63);
     width: 0%;
 }
 
@@ -91,19 +102,19 @@ h1 {
 }
 
 @media screen and (max-width: 768px) {
-    .choice-container {
+    .select-container {
         min-width: 40rem;
     }
 }
 
 @media screen and (max-width: 600px) {
-    .choice-container {
+    .select-container {
         min-width: 40rem;
     }
 }
 
 @media screen and (max-width: 550px) {
-    .choice-container {
+    .select-container {
         min-width: 25rem;
     }
 }
