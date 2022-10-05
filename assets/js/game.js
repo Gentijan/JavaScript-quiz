@@ -1,5 +1,5 @@
 const question = document.querySelector('#question');
-const choices = Array.from(document.querySelectorAll('.choice-text'));
+const choices = Array.from(document.querySelectorAll('.select-text'));
 const progressText = document.querySelector('#progressText');
 const scoreText = document.querySelector('#score');
 const progressBarFull = document.querySelector('#progressBarFull');
@@ -9,7 +9,7 @@ let acceptingAnswers = true
 let score = 0
 let questionCounter = 0
 let availableQuestions = []
-// Start-Questions
+
 let questions = [
     {
         question: 'Which player holds the record for the most final goals scored in the Champions League era?',
@@ -20,8 +20,7 @@ let questions = [
         answer: 2,
     },
     {
-        question:
-            "How many teams are there in Champions League",
+        question: "How many teams are there in Champions League",
         choice1: "32",
         choice2: "24",
         choice3: "28",
@@ -45,57 +44,125 @@ let questions = [
         answer: 2,
     },
     {
-        question: "Which team won the cup first",
-        choice1: "Celtic",
-        choice2: "Nottingham forest",
-        choice3: "Real Madrid CF",
-        choice4: "AC Milan",
-        answer: 3,
+        question: "Which player has the most assist",
+        choice1: "Cristiano Ronaldo",
+        choice2: "Leo Messi",
+        choice3: "Andre Pirlo",
+        choice4: "Luka Modric",
+        answer: 1,
     },
     {
-        question: "Which Maneger has won it most times",
-        choice1: "Pep Guardiola",
-        choice2: "Arsene Wenger",
-        choice3: "Zinedine Zidane",
-        choice4: "Carlo Ancelotti",
-        answer: 4,
-    },
-    {
-        question: "How many teams are there in each group",
-        choice1: "3",
-        choice2: "4",
-        choice3: "5",
-        choice4: "6",
+        question: "Which manager has won it the most",
+        choice1: "Zidane",
+        choice2: "Ancelotti",
+        choice3: "Mourinho",
+        choice4: "Guardiola",
         answer: 2,
     },
     {
-        question: "Which player has the most assist",
-        choice1: "Leo Messi",
-        choice2: "Di Maria",
-        choice3: "Neymar",
-        choice4: "Cristiano Ronaldo",
-        answer: 4,
-    },
-    {
-        question: "Which team has the biggest loss",
-        choice1: "Basel",
-        choice2: "Genk",
-        choice3: "Malmö",
-        choice4: "Marseille",
+        question: "Who had the biggest win in the history of the cup",
+        choice1: "Real Madrid",
+        choice2: "Barcelona",
+        choice3: "Bayern Munich",
+        choice4: "Liverpool",
         answer: 3,
     },
     {
-        question: "Which player has most UCL",
-        choice1: "Cristiano Ronaldo",
-        choice2: "Sergio Ramos",
-        choice3: "Zinedine Zidane",
-        choice4: "Paco Gento",
+        question: "Who had the biggest lose in the history of the cup",
+        choice1: "Crusaders",
+        choice2: "Red Star",
+        choice3: "Poak",
+        choice4: "Dinamo Kiev",
+        answer: 1,
+    },
+    {
+        question: "Which team won it last year",
+        choice1: "Real Madrid",
+        choice2: "Manchest City",
+        choice3: "Bayern Munich",
+        choice4: "PSG",
+        answer: 1,
+    },
+    {
+        question: "How many UCL finals has Real Madrid lost",
+        choice1: "5",
+        choice2: "2",
+        choice3: "7",
+        choice4: "3",
         answer: 4,
-    }
-    
+    },
 ]
-// End-Questions
 
 const SCORE_POINTS = 100
 const MAX_QUESTIONS = 10
 
+startGame = () => {
+    questionCounter = 0
+    score = 0
+    availableQuestions = [...questions]
+    getNewQuestion()
+}
+
+getNewQuestion = () => {
+    if(questionCounter > MAX_QUESTIONS || availableQuestions.length === 0) {
+        localStorage.setItem('mostRecentScore', score)
+        return window.location.assign('/end.html')
+    }
+
+    progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`
+    progressBarFull.style.width = `${(questionCounter/MAX_QUESTIONS) * 100}%`
+    
+    const questionsIndex = Math.floor(Math.random() * availableQuestions.length)
+    currentQuestion = availableQuestions[questionsIndex]
+    question.innerText = currentQuestion.question
+
+
+    choices.forEach(choice => {
+        const number = choice.dataset['number']
+        choice.innerText = currentQuestion['choice' + number]
+    })
+
+    availableQuestions.splice(questionsIndex, 1)
+
+    acceptingAnswers = true
+    questionCounter += 1
+}
+
+choices.forEach(choice => {
+    choice.addEventListener('click', e => {
+        if(acceptingAnswers === false) 
+        
+        return acceptingAnswers = false
+
+        const selectedChoice = e.target
+        const selectedAnswer = selectedChoice.dataset['number']
+
+        let classToApply = checkResult(selectedAnswer) 
+
+        if(classToApply === 'correct') {
+            increasScore()
+        }
+
+        selectedChoice.parentElement.classList.add(classToApply)
+
+        setTimeout(() => {
+            selectedChoice.parentElement.classList.remove(classToApply)
+            getNewQuestion()
+
+        }, 1000)
+    })
+})
+
+function checkResult(selectedAnswer) {
+    if(selectedAnswer == currentQuestion.answer) {
+        return 'correct' 
+    }
+    return 'incorrect'
+}
+
+
+function increasScore() {
+    score += SCORE_POINTS
+    scoreText.innerText = score
+}
+startGame()
