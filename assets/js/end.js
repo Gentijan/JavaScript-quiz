@@ -1,6 +1,6 @@
-const username = document.querySelector('#player')
+const username = document.querySelector('#username')
 const saveScoreBtn = document.querySelector('#saveScoreBtn')
-const finalScore = document.querySelector('#endScore')
+const finalScore = document.querySelector('#finalScore')
 const mostRecentScore = localStorage.getItem('mostRecentScore')
 
 const highScores = JSON.parse(localStorage.getItem('highScores')) || []
@@ -13,7 +13,6 @@ username.addEventListener('keyup', () => {
     saveScoreBtn.disabled = !username.value
 })
 
-//HightScore-Button
 saveHighScore = e => {
     e.preventDefault()
 
@@ -28,7 +27,7 @@ saveHighScore = e => {
         return b.score - a.score
     })
 
-    highScores.splice(5)
+    highScores.splice(10)
 
     localStorage.setItem('highScores', JSON.stringify(highScores))
     window.location.assign('/')
