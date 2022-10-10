@@ -1,7 +1,7 @@
 body {
     color: white;
 }
-
+/*Start-Question*/
 #quiz {
     width: 580px;
     height: 480px;
@@ -48,7 +48,7 @@ body {
     padding: 2rem;
     width: 100%;
 }
-
+/*JavaScript*/
 .correct {
     background: linear-gradient(32deg, rgba(11, 223, 36) 0%, rgb(41, 232, 111) 100%);
 }
@@ -56,7 +56,10 @@ body {
 .incorrect {
     background: linear-gradient(32deg, rgba(230, 29, 29, 1) 0%, rgb(224, 11, 11, 1) 100%);
 }
+/*JavaScript*/
+/*End-Game*/
 
+/*Start-HowIsGoing*/
 #hud {
     display: flex;
     justify-content: space-between;
@@ -100,6 +103,8 @@ body {
 h1 {
     margin-left: 10rem;
 }
+/*End-HowIsGoing*/
+/*Start-Responsive*/
 
 @media screen and (max-width: 768px) {
     .select-container {
@@ -118,3 +123,4 @@ h1 {
         min-width: 25rem;
     }
 }
+/*End-Responsive*/

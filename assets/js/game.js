@@ -10,6 +10,7 @@ let score = 0
 let questionCounter = 0
 let availableQuestions = []
 
+//Questions
 let questions = [
     {
         question: 'Which player holds the record for the most final goals scored in the Champions League era?',
