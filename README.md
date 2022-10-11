@@ -91,6 +91,9 @@ By forking the GitHub Repository we make a copy of the original repository on ou
 
 -   Image was taken from google images (ChampionsLeague).
 
+### Bugs
+-   I had one bug with the files, it did not work to store the css folder into the assets folder, also it did not work to store end.css file into css folder.
+
 ### Acknowledgements
 
 -   My Mentor for continuous helpful feedback.
