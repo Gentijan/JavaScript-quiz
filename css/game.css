@@ -7,7 +7,7 @@ body {
     height: 480px;
     display: none;
     position: relative;
-    background-image: url(/assets/images/background-game.webp);
+    background-image: url(assets/images/background-game.webp);
     display: block;
     border-radius: 20px;
 }
