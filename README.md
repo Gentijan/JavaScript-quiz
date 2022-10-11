@@ -1,4 +1,4 @@
-<h1 align="center">Code Institute Website</h1>
+<h1 align="center">Champions-League Quiz</h1>
 
 [View the live project here.](https://gentijan.github.io/JavaScript-quiz/)
 
@@ -57,13 +57,6 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
         1. The site has been designed to be fluid and never to entrap the user. At the top of each page there is a clean navigation bar, each link describes what the page they will end up at clearly.
         
--   #### Returning Visitor Goals
-
-    1. As a Returning Visitor, I want to find the new programming challenges or hackathons.
-
-        1. These are clearly shown in the banner message.
-        2. They will be directed to a page with another hero image and call to action.
-
 ### Further Testing
 
 -   The Website was tested on Google Chrome, Internet Explorer, Microsoft Edge and Safari browsers.
@@ -92,7 +85,7 @@ By forking the GitHub Repository we make a copy of the original repository on ou
 3. You should now have a copy of the original repository in your GitHub account.
 
 ## Credits
--   I give credit to a youtuber named Brian, i did copy his html code beacuse i wanted to have the same class and id just incase i got stuck on javaScript code. i did have some problems with end.js where Brians video helped me get thru. But other than that i mostly did it on my own  (https://www.youtube.com/watch?v=f4fB9Xg2JEY)
+-   I give credit to a youtuber named Brian, I did copy his html code beacuse I wanted to have the same class and id just incase I got stuck on javaScript code. I did have some problems with end.js where Brians video helped me get through. But other than that I mostly did it on my own  (https://www.youtube.com/watch?v=f4fB9Xg2JEY)
 
 ### Content
 
