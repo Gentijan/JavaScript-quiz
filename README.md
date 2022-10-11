@@ -10,7 +10,7 @@
 
     -   #### First Time Visitor Goals
 
-        1. As a First Time Visitor, I want to easily understand the main purpose of the site and test my knowlegde.
+        1. As a First Time Visitor, I want to easily understand the main purpose of the site and to test thier knowlegde in Champions League.
         2. As a First Time Visitor, I want to be able to easily navigate throughout the site to find content.
       
 -   ### Design
@@ -43,19 +43,15 @@
 
 The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
 
--   [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) 
--   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) 
-### Testing User Stories from User Experience (UX) Section
+ -   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)<img src="assets/images/cssvali.PNG">
+ -   [W3C HTML Validator](https://validator.w3.org/#validate_by_input)<img src="assets/images/htmlvali.PNG">
+ -   [Wave check]<img src="assets/images/wave.PNG">
 
 -   #### First Time Visitor Goals
 
     1. As a First Time Visitor, I want to easily understand the main purpose of the site.
 
         1. Upon entering the site, users are automatically greeted with 2 buttons, one to take the user to the questions the other to see the highscores.
-        
-    2. As a First Time Visitor, I want to be able to easily be able to navigate throughout the site to find content.
-
-        1. The site has been designed to be fluid and never to entrap the user. At the top of each page there is a clean navigation bar, each link describes what the page they will end up at clearly.
         
 ### Further Testing
 
