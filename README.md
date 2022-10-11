@@ -2,7 +2,7 @@
 
 [View the live project here.](https://gentijan.github.io/JavaScript-quiz/)
 
-<h2 align="center"><img src=""></h2>
+<h2 align="center"><img src="assets/images/readme.PNG"></h2>
 
 ## User Experience (UX)
 
@@ -107,3 +107,5 @@ By forking the GitHub Repository we make a copy of the original repository on ou
 -   My Mentor for continuous helpful feedback.
 
 -   Tutor support at Code Institute for their support.
+
+-   Youtube tutorial videos
